@@ -15,11 +15,10 @@
 * {
   margin: 0;
   font-family: "Quicksand" !important;
-  color: #333;
 }
 
 body {
-  background-color: #151f2f;
+  background-color: #101825;
 }
 
 .navbar {
@@ -119,13 +118,12 @@ body {
 }
 
 .project-container {
-  margin-bottom: 200px;
+  margin-bottom: 150px;
 }
 
 .project-container h2 {
-  padding-top: 100px;
+  padding-top: 70px;
   margin-left: 100px;
-  margin-bottom: 200px;
   color: #FFFFFF;
 }
 
@@ -140,7 +138,7 @@ body {
 }
 
 .about-container h2 {
-  padding-top: 100px;
+  padding-top: 70px;
   margin-left: 100px;
   margin-bottom: 100px;
   color: #FFFFFF;
@@ -171,137 +169,86 @@ body {
 .Card-Container {
   display: flex;
   justify-content: center;
+  width: 50%;
+  margin: 0 auto;
 }
 
-.card {
-  color: var(--clr-neutral-100);
-  background-image: url(https://media.contentapi.ea.com/content/dam/eacom/images/2020/09/ea-featured-image-ea-desktop-beta.jpg.adapt.crop191x100.1200w.jpg);
-  background-size: cover;
-  height: 600px;
-  width: 350px;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  transition: transform 500ms ease;
-  margin: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.carousel-image {
+  height: 300px;
+  margin-top: 0px;
+  width:50px;
 }
 
-.card-body {
+.carousel-title {
   color: white;
+  text-align: center;
+  height: 50%;
 }
 
-.card-content {
-  --padding: 1rem;
-  padding: var(--padding);
-  background: linear-gradient(hsl(0 0% 0% / 0),
-      hsl(20 0% 0% / 0.3) 20%,
-      hsl(0 0% 0% / 1));
+.carousel-body {
+  color: #FFFFFF;
+  text-align: center;
 }
 
-.card-title {
-  position: relative;
-  width: max-content;
-  font-size: 1.2rem;
-  margin-top: -40px;
+.carousel-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  width: 100%;
 }
 
-.card:hover .card-title::after,
-.card:focus-within .card-title::after {
-  transform: scaleX(1);
+.carousel.carousel-slider .control-arrow {
+  color: black !important;
 }
 
-.card-title::after {
-  content: "";
-  position: absolute;
-  height: 4px;
-  width: calc(100% + var(--padding));
-  left: calc(var(--padding) * -1);
-  bottom: -2px;
-  background: var(--clr-accent-400);
-  transform-origin: left;
-  transform: scaleX(0);
-  transition: transform 500ms ease;
+.carousel {
+  color: black;
 }
 
-@media (hover) {
-  .card-content {
-    transform: translateY(65%);
-    transition: transform 500ms ease;
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .Card-Container {
+    width: 90%; /* Adjust container width for smaller screens */
   }
 
-  .card-content>*:not(.card-title) {
-    opacity: 0;
-    transition: opacity 500ms linear;
+  .carousel-title {
+    font-size: 1.5rem; /* Decrease font size for smaller screens */
   }
 
-  .card:hover .card-content>*:not(.card-title),
-  .card:focus-within .card-content>*:not(.card-title) {
-    opacity: 1;
-    transition-delay: 700ms;
-  }
-
-  .card:hover .card-content,
-  .card:focus-within .card-content {
-    transform: translateY(0);
-    transition-delay: 500ms;
-  }
-
-  .card:focus-within .card-content {
-    transition-duration: 0ms;
-  }
-
-  .card-title::after {
-    transform: scaleX(0);
+  .carousel-slide {
+    padding: 10px; /* Adjust spacing for smaller screens */
   }
 }
 
-.button {
-  cursor: pointer;
-  display: inline-block;
-  text-decoration: none;
-  color: var(--clr-neutral-900);
-  background-color: var(--clr-accent-400);
-  padding: 0.5em 1.25em;
-  border-radius: 0.25rem;
-}
+/* Media query for screens with a maximum width of 420px */
+@media (max-width: 420px) {
+  .Card-Container {
+    width: 90%; /* Adjust container width for smaller screens */
+  }
 
-.button:hover,
-.button:focus {
-  text-decoration: none;
-  background-color: var(--clr-neutral-100);
-}
+  .carousel-title {
+    font-size: 1.2rem; /* Further decrease font size for very small screens */
+  }
 
-.card-body {
-  color: rgb(255, 255, 255/0.85);
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-    transition-delay: 0ms !important;
+  .carousel-slide {
+    padding: 10px; /* Adjust spacing for smaller screens */
   }
 }
 
-.skills-container h1 {
+.skills-container h2 {
+  padding-top: 100px;
+  margin-left: 100px;
   color: #FFFFFF;
 }
 
 .skills-container {
-  margin-top: 100px;
   margin-left: 100px;
 }
 
 .Box {
   margin-left: 200px;
   margin-right: 300px;
-  margin-top: 200px;
+  margin-top: 150px;
   margin-bottom: 200px;
 }

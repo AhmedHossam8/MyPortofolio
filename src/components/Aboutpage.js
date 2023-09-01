@@ -1,29 +1,44 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import Abouttext from "./Abouttext";
-import AboutSecText from "./AboutSecText";
+import React from 'react';
+import { useInView } from 'react-intersection-observer';
+import Abouttext from './Abouttext';
+import AboutSecText from './AboutSecText';
+import { animated, useSpring } from 'react-spring';
 
 const About = () => {
     const [ref, inView] = useInView({
-        triggerOnce: true, // This will trigger the animation only once
-        threshold: 0.2, // Change this threshold as needed
+        triggerOnce: true,
+        threshold: 0.2,
+    });
+
+    const mainDivProps = useSpring({
+        opacity: inView ? 1 : 0,
+        from: { opacity: 0 },
+        config: { duration: 1500 },
+    });
+
+    const panelProps = useSpring({
+        y: inView ? 0 : -50,
+        opacity: inView ? 1 : 0,
+        from: { y: -50, opacity: 0 },
+        config: { delay: 200, duration: 1500 },
+    });
+
+    const underPanelProps = useSpring({
+        opacity: inView ? 1 : 0,
+        from: { opacity: 0 },
+        config: { delay: 400, duration: 1500 },
     });
 
     return (
-        <motion.div
+        <animated.div
             className="about-container"
-            initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : { opacity: 0 }} // Animate when in view
-            transition={{ duration: 1.5 }}
-            ref={ref} // Attach the ref to the main div
+            style={mainDivProps}
+            ref={ref}
         >
-            <h2 style={{ color: "#FFFFFF" }}>About Me</h2>
-            <motion.div
+            <h2 style={{ color: '#FFFFFF' }}>About Me</h2>
+            <animated.div
                 className="about-panel"
-                initial={{ y: -50, opacity: 0 }}
-                animate={inView ? { y: 0, opacity: 1 } : { y: -50, opacity: 0 }} // Animate when in view
-                transition={{ delay: 0.2, duration: 1.5 }}
+                style={panelProps}
             >
                 <div className="about-text">
                     <Abouttext />
@@ -31,17 +46,15 @@ const About = () => {
                 <div className="about-img">
                     <img src="/about.jpg" alt="myAbout" />
                 </div>
-            </motion.div>
-            <motion.div
+            </animated.div>
+            <animated.div
                 className="under_panel"
-                initial={{ opacity: 0 }}
-                animate={inView ? { opacity: 1 } : { opacity: 0 }} // Animate when in view
-                transition={{ delay: 0.4, duration: 1.5 }}
+                style={underPanelProps}
             >
                 <AboutSecText />
-            </motion.div>
-        </motion.div>
+            </animated.div>
+        </animated.div>
     );
-}
+};
 
 export default About;

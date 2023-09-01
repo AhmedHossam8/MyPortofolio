@@ -47,9 +47,9 @@ export default function VerticalTabs() {
 
     return (
         <div className='skills-container'>
-            <h1>My Skills</h1>
+            <h2>My Skills</h2>
             <Box
-                sx={{ flexGrow: 1, bgcolor: '#2D4264', display: 'flex', height: 224 }} className='Box'
+                sx={{ flexGrow: 1, bgcolor: '#151f2f', display: 'flex', height: 224}} className='Box'
             >
                 <Tabs
                     orientation="vertical"
@@ -57,13 +57,13 @@ export default function VerticalTabs() {
                     value={value}
                     onChange={handleChange}
                     aria-label="Vertical tabs example"
-                    sx={{ borderRight: 1, borderColor: 'divider' }}
+                    sx={{ borderRight: 1, borderColor: 'divider', color: "white"}}
                 >
-                    <Tab label="Front-End Development" {...a11yProps(0)} />
-                    <Tab label="Back-End Development" {...a11yProps(1)} />
-                    <Tab label="Mobile Development" {...a11yProps(2)} />
-                    <Tab label="Programming Languages" {...a11yProps(3)} />
-                    <Tab label="Others" {...a11yProps(4)} />
+                    <Tab label="Front-End Development" {...a11yProps(0)} sx={{color: "white"}} />
+                    <Tab label="Back-End Development" {...a11yProps(1)} sx={{color: "white"}} />
+                    <Tab label="Mobile Development" {...a11yProps(2)} sx={{color: "white"}} />
+                    <Tab label="Programming Languages" {...a11yProps(3)} sx={{color: "white"}} />
+                    <Tab label="Others" {...a11yProps(4)} sx={{color: "white"}} />
                 </Tabs>
                 <TabPanel value={value} index={0}>
                     <strong style={{ color: "aquamarine" }}>Languages</strong>

@@ -1,47 +1,56 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from "react-dom";
+import ReactDOM from 'react-dom';
 import data from '../data/projects.json';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 
 const Cards = () => {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        setProjects(data["Projects"]);
+        setProjects(data['Projects']);
     }, []);
 
-    const chunkArray = (array, chunkSize) => {
-        const chunkedArray = [];
-        for (let i = 0; i < array.length; i += chunkSize) {
-            chunkedArray.push(array.slice(i, i + chunkSize));
-        }
-        return chunkedArray;
-    };
-
-    const chunkedProjects = chunkArray(projects, 2);
 
     return (
-        <div className='Card-Container'>
-            {chunkedProjects.map((rowProjects, rowIndex) => (
-                <div className='Card-Row' key={rowIndex}>
-                    {rowProjects.map((project) => (
-                        <div key={project.id} className="card">
-                            <div className="card-content" >
-                                <h2 className="card-title">{project.title}</h2>
-                                <p className="card-body">{project.body}</p>
-                                <a href={project.link} className="button">
+        <div className="Card-Container">
+            <Carousel
+                showArrows={true}
+                showThumbs={false}
+                showStatus={false}
+                className="custom-carousel"
+            >
+                {projects.map((project) => (
+                    <div key={project.id} className="carousel-slide">
+                        <div className="carousel-content">
+                            <div className="carousel-inner">
+                                <h3 className="carousel-title">
+                                    {project.title}
+                                </h3>
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="carousel-image"
+                                />
+                                <p className="carousel-body" style={{marginTop: "10px"}}>{project.body}</p>
+                                <a
+                                    href={project.link}
+                                    className="carousel-button"
+                                    style={{ textDecoration: "none" }}
+                                >
                                     View Project
                                 </a>
                             </div>
                         </div>
-                    ))}
-                </div>
-            ))}
+                    </div>
+                ))}
+            </Carousel>
         </div>
     );
-}
+};
 
-export default Cards; // Export the Cards component
+export default Cards;
 
-// Rendering code remains the same
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById('root');
 ReactDOM.render(<Cards />, rootElement);

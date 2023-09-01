@@ -4,6 +4,8 @@ import Divider from '@mui/joy/Divider';
 import Projectspage from "./Projectspage";
 import VerticalTabs from "./Skills";
 import Aboutpage from "./Aboutpage";
+import ContactPage from "./Contactpage";
+import Footer from "./Footer";
 
 
 function Homepage() {
@@ -33,6 +35,13 @@ function Homepage() {
 
             <Divider style={{ color: "#FFFFFF" }}>~ ~ ~</Divider>
 
+            <section id="contact">
+                <ContactPage />
+            </section>
+
+            <section>
+                <Footer />
+            </section>
         </>
     )
 }
