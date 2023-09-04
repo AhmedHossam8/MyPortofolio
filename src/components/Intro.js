@@ -29,25 +29,25 @@ const Intro = () => {
     });
 
     return (
-        <animated.div // Wrap your main div with animated.div
+        <animated.div
             className="fluid-container"
-            style={mainDivProps} // Use style prop for animations
+            style={mainDivProps}
         >
-            <animated.div // Wrap your hero div with animated.div for animations
-                className='hero'
-                style={heroDivProps} // Use style prop for animations
+            <animated.div
+                className='hero res-hero'
+                style={heroDivProps}
             >
                 <h1 style={{ color: 'white' }}>
                     I'm <span style={{ color: 'aquamarine' }}>Ahmed Emara</span>.
-                    Undergraduate Computer Science student @AAST and Intern @ITWorx Cairo Egypt.
+                    Undergraduate Computer Science student @AAST and Former intern @ITWorx Cairo Egypt.
                 </h1>
                 <div className="img-container">
                     <img src="./myPhoto.png" alt="Ahmed Emara" />
                 </div>
             </animated.div>
-            <animated.div // Wrap your myAbout div with animated.div for animations
+            <animated.div
                 className='myAbout'
-                style={aboutDivProps} // Use style prop for animations
+                style={aboutDivProps}
             >
                 <button className="linkButton" onClick={() => handleShowProject()}>
                     View my projects

@@ -22,11 +22,11 @@ body {
 }
 
 .navbar {
-  height: 60px;
+  height: 3.75rem;
 }
 
 .navbar-collapse {
-  padding: 20px;
+  padding: 1.25rem;
   justify-content: center;
 }
 
@@ -37,7 +37,6 @@ body {
 .navbar-nav .nav-item .nav-link.active {
   color: #FFFFFF;
 }
-
 
 .nav-link {
   color: #CACACA !important;
@@ -51,7 +50,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  margin-top: 200px;
+  margin-top: 12.5rem;
 }
 
 .hero h1 {
@@ -63,7 +62,7 @@ body {
 }
 
 .img-container {
-  border-radius: 200px;
+  border-radius: 12.5rem;
   overflow: hidden;
 }
 
@@ -74,13 +73,13 @@ body {
 
 .myAbout a {
   text-decoration: none;
-  padding: 10px;
-  margin-left: 25px;
+  padding: 0.625rem;
+  margin-left: 1.563rem;
 }
 
 .myAbout {
   font-size: larger;
-  margin-bottom: 200px;
+  margin-bottom: 12.5rem;
 }
 
 .myAboutLink {
@@ -94,22 +93,22 @@ body {
 .myAboutLink:hover::before {
   content: "➜";
   display: inline-block;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .linkButton {
-  margin-left: 100px;
+  margin-left: 6.25rem;
   background-color: #FFFFFF;
   color: black;
   border: none;
-  border-radius: 20px;
-  padding: 10px 30px;
+  border-radius: 1.25rem;
+  padding: 0.625rem 1.875rem;
   display: inline-flex;
 }
 
 .linkButton:hover {
   cursor: pointer;
-  padding: 10px 40px;
+  padding: 0.625rem 2.5rem;
   transition: 0.4s;
 }
 
@@ -117,37 +116,27 @@ body {
   opacity: 1;
 }
 
-.project-container {
-  margin-bottom: 150px;
-}
-
-.project-container h2 {
-  padding-top: 70px;
-  margin-left: 100px;
+.about-container h2 {
+  padding-top: 4.375rem;
+  margin-left: 6.25rem;
+  margin-bottom: 6.25rem;
   color: #FFFFFF;
 }
 
 .about-panel {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .under_panel {
-  margin-bottom: 200px;
-  margin-right: 50px;
-}
-
-.about-container h2 {
-  padding-top: 70px;
-  margin-left: 100px;
-  margin-bottom: 100px;
-  color: #FFFFFF;
+  margin-bottom: 12.5rem;
+  margin-right: 3.125rem;
 }
 
 .about-container p {
   color: #FFFFFF;
-  margin-left: 100px;
-  margin-right: 50px;
+  margin-left: 6.25rem;
+  margin-right: 3.125rem;
   size: large;
   font-size: large;
 }
@@ -158,12 +147,22 @@ body {
 
 .about-img {
   width: 50%;
-  margin-right: 100px;
+  margin-right: 6.25rem;
 }
 
 .about-img img {
   width: 100%;
   height: 100%;
+}
+
+.project-container {
+  margin-bottom: 9.375rem;
+}
+
+.project-container h2 {
+  padding-top: 4.375rem;
+  margin-left: 6.25rem;
+  color: #FFFFFF;
 }
 
 .Card-Container {
@@ -174,9 +173,9 @@ body {
 }
 
 .carousel-image {
-  height: 300px;
-  margin-top: 0px;
-  width:50px;
+  height: 18.75rem;
+  margin-top: 0;
+  width: 3.125rem;
 }
 
 .carousel-title {
@@ -194,7 +193,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 600px;
+  height: 37.5rem;
   width: 100%;
 }
 
@@ -206,49 +205,361 @@ body {
   color: black;
 }
 
-/* Media query for screens with a maximum width of 768px */
-@media (max-width: 768px) {
+.skills-tab {
+  display: flex;
+  width: 1rem;
+}
+
+@media (min-width: 500px) and (max-width: 950px) {
+  .hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .hero h1 {
+    max-width: 26.25rem;
+    width: 100%;
+    margin-top: 5rem;
+    font-size: 2rem;
+  }
+
+  .hero .img-container {
+    width: 15rem;
+    border-radius: 12.5rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    margin-top: 4rem;
+  }
+
+  .myAbout {
+    font-size: larger;
+    margin-bottom: 4rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    display: flex;
+  }
+
+  .myAbout a {
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 2rem;
+    margin-right: auto;
+  }
+
+  .myAboutLink {
+    color: white;
+  }
+
+  .linkButton {
+    background-color: #FFFFFF;
+    color: black;
+    border: none;
+    border-radius: 1.25rem;
+    padding: 0.625rem 1.875rem;
+    display: block;
+    margin-left: auto;
+  }
+
+  .about-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 59.375rem;
+  }
+
+  .about-container h2 {
+    padding-top: 4.375rem;
+    color: #FFFFFF;
+    font-size: 2rem;
+    justify-content: center;
+  }
+
+  .about-container p {
+    color: #FFFFFF;
+    margin-left: 3.125rem;
+    margin-right: 3.125rem;
+    size: large;
+    font-size: large;
+  }
+
+  .about-panel {
+    margin-top: 1.25rem;
+    display: block;
+  }
+
+  .about-text {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1.25rem;
+  }
+
+  .about-img {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-img img {
+    width: 25rem;
+  }
+
+  .project-container {
+    margin-bottom: 9.375rem;
+  }
+
+  .project-container h2 {
+    padding-top: 4.375rem;
+    margin-left: 6.25rem;
+    color: #FFFFFF;
+  }
+
   .Card-Container {
-    width: 90%; /* Adjust container width for smaller screens */
+    width: 90%;
+  }
+
+  .carousel-content {
+    width: 22rem;
   }
 
   .carousel-title {
-    font-size: 1.5rem; /* Decrease font size for smaller screens */
+    font-size: 1.5rem;
   }
 
   .carousel-slide {
-    padding: 10px; /* Adjust spacing for smaller screens */
+    padding: 0.625rem;
+  }
+
+  .Box {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    background-color: #101825 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0 !important;
+  }
+
+  .skills-container h2 {
+    margin-left: 0 !important;
+  }
+
+  .MuiTabs-vertical {
+    min-width: 6.7rem;
+  }
+
+  .skills-tab {
+    width: 100%;
+  }
+
+  .css-19kzrtu {
+    padding: 1rem !important;
+    min-width: 7rem;
+    max-width: 10rem;
   }
 }
 
-/* Media query for screens with a maximum width of 420px */
-@media (max-width: 420px) {
+@media (max-width: 499px) {
+  .hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 1.5rem;
+  }
+
+  .hero h1 {
+    width: 100%;
+    margin-top: 5rem;
+    font-size: 1.5rem;
+  }
+
+  .hero .img-container {
+    width: 12.5rem;
+    border-radius: 12.5rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
+  .myAbout {
+    font-size: larger;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .myAbout a {
+    text-decoration: none;
+    display: inline-block !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+  }
+
+  .myAboutLink {
+    color: white;
+  }
+
+  .linkButton {
+    background-color: #FFFFFF;
+    color: black;
+    border: none;
+    border-radius: 1.25rem;
+    padding: 0.625rem 1.875rem;
+    display: block;
+    margin: 0 auto;
+    margin-top: 4rem;
+  }
+
+  .about-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 59.375rem;
+  }
+
+  .about-container h2 {
+    padding-top: 4.375rem;
+    color: #FFFFFF;
+    font-size: 1.7rem;
+    justify-content: center;
+  }
+
+  .about-container p {
+    color: #FFFFFF;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    size: large;
+    font-size: large;
+  }
+
+  .about-panel {
+    margin-top: 1.25rem;
+    display: block;
+  }
+
+  .about-text {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1.25rem;
+  }
+
+  .about-img {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-img img {
+    width: 20rem;
+  }
+
   .Card-Container {
-    width: 90%; /* Adjust container width for smaller screens */
+    width: 90%;
+  }
+
+  .carousel-content {
+    width: 20rem;
   }
 
   .carousel-title {
-    font-size: 1.2rem; /* Further decrease font size for very small screens */
+    margin-top: 4rem;
+    font-size: 1.2rem;
   }
 
-  .carousel-slide {
-    padding: 10px; /* Adjust spacing for smaller screens */
+  .carousel-slider {
+    height: 40rem;
   }
-}
 
-.skills-container h2 {
-  padding-top: 100px;
-  margin-left: 100px;
-  color: #FFFFFF;
-}
+  .Box {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    background-color: #101825 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: flex;
+    flex-direction: column;
+  }
 
-.skills-container {
-  margin-left: 100px;
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0 !important;
+    max-width: 420px;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .skills-container h2 {
+    margin-left: 0 !important;
+    max-width: 100%;
+  }
+
+  .MuiTabs-vertical {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .MuiTabs-horizontal {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+  }
+
+  .skills-tab {
+    width: 100%;
+    max-width: 13.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .css-19kzrtu {
+    width: 8rem;
+  }
+
+  .css-ahj2mt-MuiTypography-root {
+    font-size: 0.9rem !important;
+    padding: 0 !important;
+  }
+
+  .TabPanel {
+    padding: 0;
+    width: 7rem;
+    margin-left: 0;
+  }
+
+  .TabPanel ul {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem;
+  }
+
+  .TabPanel ul li {
+    margin: 0;
+  }
 }
 
 .Box {
-  margin-left: 200px;
-  margin-right: 300px;
-  margin-top: 150px;
-  margin-bottom: 200px;
+  margin-left: 12.5rem;
+  margin-right: 18.75rem;
+  margin-top: 9.375rem;
+  margin-bottom: 12.5rem;
+}
+
+.skills-container {
+  margin-left: 6.25rem;
+}
+
+.skills-container h2 {
+  padding-top: 6.25rem;
+  margin-left: 6.25rem;
+  color: #FFFFFF;
 }
