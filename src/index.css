@@ -25,13 +25,13 @@ body {
   height: 3.75rem;
 }
 
-.navbar-collapse {
-  padding: 1.25rem;
+.navbar .container {
   justify-content: center;
 }
 
-.navbar .links {
-  margin: auto;
+.navbar-collapse {
+  padding: 1.25rem;
+  justify-content: center !important;
 }
 
 .navbar-nav .nav-item .nav-link.active {
@@ -211,6 +211,10 @@ body {
 }
 
 @media (min-width: 500px) and (max-width: 950px) {
+  .custom-navbar-bg.navbar {
+    background-color: #101825;
+  }
+
   .hero {
     width: 100%;
     display: flex;
@@ -305,6 +309,12 @@ body {
     width: 25rem;
   }
 
+  .under_panel {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1.25rem;
+  }
+
   .project-container {
     margin-bottom: 9.375rem;
   }
@@ -352,6 +362,15 @@ body {
 
   .MuiTabs-vertical {
     min-width: 6.7rem;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .MuiTabs-vertical>div {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
   }
 
   .skills-tab {
@@ -366,6 +385,10 @@ body {
 }
 
 @media (max-width: 499px) {
+  .custom-navbar-bg.navbar {
+    background-color: #101825;
+  }
+
   .hero {
     width: 100%;
     display: flex;
@@ -460,6 +483,12 @@ body {
     width: 20rem;
   }
 
+  .under_panel {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1.25rem;
+  }
+
   .Card-Container {
     width: 90%;
   }
@@ -502,11 +531,6 @@ body {
     max-width: 100%;
   }
 
-  .MuiTabs-vertical {
-    display: flex;
-    flex-direction: row;
-  }
-
   .MuiTabs-horizontal {
     display: flex;
     justify-content: center;
@@ -544,6 +568,10 @@ body {
 
   .TabPanel ul li {
     margin: 0;
+  }
+
+  .vertical-tabs {
+    flex-direction: row !important;
   }
 }
 

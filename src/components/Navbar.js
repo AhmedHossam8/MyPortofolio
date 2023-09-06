@@ -1,34 +1,23 @@
-import React from "react";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
-const Navbar = () => {
+function navbar() {
     return (
-        <nav className="navbar navbar-expand-lg fixed-top" style={{ backgroundColor: '#101825' }}>
-            <div className="container-fluid">
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <a className="nav-link" aria-current="page" href="/">Home</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/#about">About</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/#projects">Projects</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/#skills">Skills</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <>
+            <Navbar bg="#101825" data-bs-theme="dark" fixed="top" className="custom-navbar-bg">
+                <Container>
+                    <Nav className="me-auto">
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="#about">About</Nav.Link>
+                        <Nav.Link href="#projects">Projects</Nav.Link>
+                        <Nav.Link href="#skills">Skills</Nav.Link>
+                        <Nav.Link href="#contact">Contact</Nav.Link>
+                    </Nav>
+                </Container>
+            </Navbar>
+        </>
     );
 }
 
-export default Navbar;
+export default navbar;

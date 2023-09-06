@@ -49,14 +49,14 @@ export default function VerticalTabs() {
         <div className='skills-container'>
             <h2>My Skills</h2>
             <Box
-                sx={{ flexGrow: 1, bgcolor: '#151f2f', display: 'flex', height: 224 }} className='Box'
+                sx={{ flexGrow: 1, display: 'flex', height: 224 }} className='Box'
             >
                 <Tabs
+                    className='vertical-tabs'
                     orientation="vertical"
                     variant="scrollable"
                     value={value}
                     onChange={handleChange}
-                    aria-label="Vertical tabs example"
                     sx={{ borderRight: 1, borderColor: 'divider', color: "white" }}
                 >
                     <Tab label="Front-End Development" {...a11yProps(0)} sx={{ color: "white" }} />
