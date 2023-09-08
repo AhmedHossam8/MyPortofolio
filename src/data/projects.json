@@ -1,39 +1,32 @@
 {
     "Projects": [
       {
-        "title": "Comic App",
-        "body": "An innovative AI comic app revolutionizes reading with personalized narratives. Users shape content by inputting names, actions, and panels—AI generates dynamic comic panels for a distinct adventure, seamlessly integrating AI-designed images.",
-        "link": "https://github.com/AhmedHossam8/WeatherApp",
-        "image": "/weatherProject.png",
-        "id": 1
-      },
-      {
         "title": "Weather App",
         "body": "A user-friendly web application offering convenient access to upcoming weather forecasts personalized to user locations. Designed the Frontend using Reactjs aesthetics with ASP.NET Core for backend, this app ensures accurate and engaging weather insights.",
         "link": "https://github.com/AhmedHossam8/WeatherApp",
         "image": "/weatherProject.png",
-        "id": 2
+        "id": 1
       },
       {
         "title": "Social Media Website",
         "body": "A social media website where users can post and view their profiles Designed the Frontend using HTML, CSS and Javascript Developed the Backend API using Python and FastAPI Framework Implemented PostegreSQL database using SQL Alchemy package.",
         "link": "https://github.com/AhmedHossam8/social-media-website",
         "image": "/socialMediaProject.png",
-        "id": 3
+        "id": 2
       },
       {
         "title": "Library System Website",
         "body": "An innovative library system website, offering users the ability to explore an extensive collection of books and supplementary information. Designed the Frontend using HTML, CSS, and Javascript, while integrated the Backend API with Node.js technology.",
         "link": "https://github.com/AhmedHossam8/LibrarySystem",
         "image": "/librarySystemProject.jpeg",
-        "id": 4
+        "id": 3
       },
       {
         "title": "Car Showroom Website",
         "body": "A car showroom platform that offers users the opportunity to seamlessly navigate through different car models, each accompanied by comprehensive details. Designed the Frontend using HTML, CSS, and Javascript, while integrated the Backend using PHP.",
         "link": "https://github.com/AhmedHossam8/Car-Showroom",
         "image": "/carShowroomProject.jpg",
-        "id": 5
+        "id": 4
       }
     ]
   }

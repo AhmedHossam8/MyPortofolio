@@ -18,7 +18,7 @@
 }
 
 body {
-  background-color: #101825;
+  background-color: #101825 !important;
 }
 
 .navbar {
@@ -26,7 +26,7 @@ body {
 }
 
 .navbar .container {
-  justify-content: center;
+  justify-content: center !important;
 }
 
 .navbar-collapse {
@@ -168,7 +168,7 @@ body {
 .Card-Container {
   display: flex;
   justify-content: center;
-  width: 50%;
+  width: 55%;
   margin: 0 auto;
 }
 
@@ -205,9 +205,38 @@ body {
   color: black;
 }
 
+.external-arrow-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.external-arrow {
+  width: 2rem;
+  cursor: pointer;
+}
+
 .skills-tab {
   display: flex;
   width: 1rem;
+}
+
+.Box {
+  margin-left: 12.5rem;
+  margin-right: 18.75rem;
+  margin-top: 9.375rem;
+  margin-bottom: 12.5rem;
+}
+
+.skills-container {
+  margin-left: 6.25rem;
+  margin-right: 6.25rem;
+}
+
+.skills-container h2 {
+  padding-top: 6.25rem;
+  margin-left: 6.25rem;
+  color: #FFFFFF;
 }
 
 @media (min-width: 500px) and (max-width: 950px) {
@@ -326,61 +355,38 @@ body {
   }
 
   .Card-Container {
-    width: 90%;
+    width: 80vw;
   }
 
   .carousel-content {
-    width: 22rem;
+    width: 80vw;
   }
 
   .carousel-title {
-    font-size: 1.5rem;
+    margin-top: 4vh;
   }
 
-  .carousel-slide {
-    padding: 0.625rem;
-  }
-
-  .Box {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-    background-color: #101825 !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+  .carousel-slider {
+    height: 50vh;
   }
 
   .skills-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0 !important;
-  }
-
-  .skills-container h2 {
-    margin-left: 0 !important;
-  }
-
-  .MuiTabs-vertical {
-    min-width: 6.7rem;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .MuiTabs-vertical>div {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: flex-start !important;
-    align-items: center !important;
-  }
-
-  .skills-tab {
     width: 100%;
   }
 
-  .css-19kzrtu {
-    padding: 1rem !important;
-    min-width: 7rem;
-    max-width: 10rem;
+  .Box {
+    margin: 0;
+    width: 70vw;
+    margin-bottom: 3rem;
+  }
+
+  .skills-container h2 {
+    padding-top: 3rem;
+    margin-left: 0;
+  }
+
+  .skills-tab {
+    width: 40vw;
   }
 }
 
@@ -490,21 +496,22 @@ body {
   }
 
   .Card-Container {
-    width: 90%;
+    width: 90vw;
   }
 
   .carousel-content {
-    width: 20rem;
+    width: 80vw;
   }
 
   .carousel-title {
-    margin-top: 4rem;
-    font-size: 1.2rem;
+    margin-top: 4vh;
+    font-size: 4vw;
   }
 
   .carousel-slider {
-    height: 40rem;
+    height: 55vh;
   }
+
 
   .Box {
     margin-top: 4rem;
@@ -573,21 +580,4 @@ body {
   .vertical-tabs {
     flex-direction: row !important;
   }
-}
-
-.Box {
-  margin-left: 12.5rem;
-  margin-right: 18.75rem;
-  margin-top: 9.375rem;
-  margin-bottom: 12.5rem;
-}
-
-.skills-container {
-  margin-left: 6.25rem;
-}
-
-.skills-container h2 {
-  padding-top: 6.25rem;
-  margin-left: 6.25rem;
-  color: #FFFFFF;
 }

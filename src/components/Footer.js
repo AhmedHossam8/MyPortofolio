@@ -69,9 +69,6 @@ export default function Footer() {
                 <Box mt={5}>
                     <Typography color="#CACACA" align="center">
                         {"Copyright © "}
-                        <Link color="inherit" href="https://your-website.com/">
-                            Your Website
-                        </Link>{" "}
                         {new Date().getFullYear()}
                         {". "}
                         The website is made by Ahmed Emara
