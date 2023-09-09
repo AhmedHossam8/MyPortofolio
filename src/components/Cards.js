@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import data from '../data/projects.json';
 import { Carousel } from 'react-responsive-carousel';
@@ -6,7 +6,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const Cards = () => {
     const [projects, setProjects] = useState([]);
-    const [currentIndex, setCurrentIndex] = useState(0); // Define currentIndex state
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
         setProjects(data['Projects']);
@@ -26,7 +26,7 @@ const Cards = () => {
 
     return (
         <div className="Card-Container">
-            <div className='external-arrow-div' style={{ marginRight: "1rem" }}>
+            <div className='external-arrow-div left-arrow' style={{ marginRight: "1rem" }}>
                 <img src='./leftarrow.ico' alt='left arrow' onClick={handlePrevClick} className='external-arrow'></img>
             </div>
 
@@ -35,8 +35,8 @@ const Cards = () => {
                 showThumbs={false}
                 showStatus={false}
                 className="custom-carousel"
-                selectedItem={currentIndex} // Add selectedItem prop
-                onChange={(index) => setCurrentIndex(index)} // Update currentIndex on change
+                selectedItem={currentIndex}
+                onChange={(index) => setCurrentIndex(index)}
             >
                 {projects.map((project) => (
                     <div key={project.id} className="carousel-slide">
@@ -55,16 +55,19 @@ const Cards = () => {
                                     href={project.link}
                                     className="carousel-button"
                                     style={{ textDecoration: "none" }}
+                                    target="_blank"
+                                    rel="noopener noreferrer" // For security reasons, add this attribute
                                 >
                                     View Project
                                 </a>
+
                             </div>
                         </div>
                     </div>
                 ))}
             </Carousel>
 
-            <div className='external-arrow-div' style={{ marginLeft: "1rem" }}>
+            <div className='external-arrow-div  right-arrow' style={{ marginLeft: "1rem" }}>
                 <img src='./rightarrow.ico' alt='right arrow' onClick={handleNextClick} className='external-arrow'></img>
             </div>
         </div>
