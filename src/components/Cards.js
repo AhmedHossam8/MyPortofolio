@@ -26,7 +26,7 @@ const Cards = () => {
 
     return (
         <div className="Card-Container">
-            <div className='external-arrow-div left-arrow' style={{ marginRight: "1rem" }}>
+            <div className='external-arrow-div left-arrow'>
                 <img src='./leftarrow.ico' alt='left arrow' onClick={handlePrevClick} className='external-arrow'></img>
             </div>
 
@@ -67,7 +67,7 @@ const Cards = () => {
                 ))}
             </Carousel>
 
-            <div className='external-arrow-div  right-arrow' style={{ marginLeft: "1rem" }}>
+            <div className='external-arrow-div  right-arrow'>
                 <img src='./rightarrow.ico' alt='right arrow' onClick={handleNextClick} className='external-arrow'></img>
             </div>
         </div>
