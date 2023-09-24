@@ -4,10 +4,11 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
-
     return (
         <div
             role="tabpanel"
@@ -40,10 +41,12 @@ function a11yProps(index) {
 
 export default function VerticalTabs() {
     const [value, setValue] = React.useState(0);
-
+    
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+    const theme = useTheme();
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
         <div className='skills-container'>
@@ -53,11 +56,10 @@ export default function VerticalTabs() {
             >
                 <Tabs
                     className='vertical-tabs'
-                    orientation="vertical"
+                    orientation={isSmallScreen ? 'horizontal' : 'vertical'}
                     variant="scrollable"
                     value={value}
                     onChange={handleChange}
-                    sx={{ borderRight: 1, borderColor: 'divider', color: "white" }}
                 >
                     <Tab label="Front-End Development" {...a11yProps(0)} sx={{ color: "white" }} />
                     <Tab label="Back-End Development" {...a11yProps(1)} sx={{ color: "white" }} />
@@ -69,7 +71,7 @@ export default function VerticalTabs() {
                     <TabPanel value={value} index={0} className='TabPanel'>
                         <strong style={{ color: "aquamarine" }}>Languages</strong>
                         <ul>
-                            <li style={{ color: "white" }}>HTML/HTML5</li>
+                            <li style={{ color: "white" }}>HTML</li>
                             <li style={{ color: "white" }}>CSS</li>
                             <li style={{ color: "white" }}>Javascript</li>
                         </ul>

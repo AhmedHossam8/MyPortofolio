@@ -553,7 +553,6 @@ body {
   .Box {
     margin-top: 4rem;
     margin-bottom: 4rem;
-    background-color: #101825 !important;
     margin-left: auto !important;
     margin-right: auto !important;
     display: flex;
@@ -567,7 +566,6 @@ body {
     margin-left: 0 !important;
     max-width: 420px;
     width: 100%;
-    overflow-x: auto;
   }
 
   .skills-container h2 {
@@ -575,18 +573,10 @@ body {
     max-width: 100%;
   }
 
-  .MuiTabs-horizontal {
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 1rem;
-  }
-
   .skills-tab {
     width: 100%;
-    max-width: 13.5rem;
+    max-width: 7rem;
     display: flex;
-    justify-content: center;
   }
 
   .css-19kzrtu {
@@ -600,7 +590,7 @@ body {
 
   .TabPanel {
     padding: 0;
-    width: 7rem;
+    width: 100%;
     margin-left: 0;
   }
 
@@ -615,10 +605,10 @@ body {
   }
 
   .vertical-tabs {
-    flex-direction: row !important;
-  }
-
-  .css-h74a88 {
-    height: 65vh !important;
+    color: white;
+    position: sticky;
+    top: 4rem;
+    background-color: transparent;
+    width: 20rem;
   }
 }
